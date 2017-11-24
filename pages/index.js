@@ -95,7 +95,7 @@ export default class Home extends React.Component {
                   <InputGroupButton>
                     <Button color="primary" onClick={e => this.doSearch(e)}><i className="fa fa-search"></i> Search</Button>
                   </InputGroupButton>
-                  <Input type="text" id="query" onChange={evt => this.updateInputValue(evt)} placeholder="Enter query"/>
+                  <Input type="text" id="query" onChange={evt => this.updateInputValue(evt)} placeholder="Enter query e.g Techno Spark"/>
                 </InputGroup>
               </Col>
           </Row>
@@ -114,7 +114,7 @@ export default class Home extends React.Component {
                   {(this.state.loading) ? <Loading /> :
                   <Row>
                     {this.state.products.map((product, index) => (
-                      <Col xs="12" sm="6" md="3" key={index}>
+                      <Col xs="12" sm="6" md="3" key={index} style={{paddingTop: '15px', paddingBottom: '15px'}}>
                         <Card className="border-primary">
                           <CardBody>
                             <Row>
@@ -129,7 +129,7 @@ export default class Home extends React.Component {
                                     <div className="text-muted">{product.price}</div>
                                   </Col>
                                   <Col md="4">
-                                    <div className="text-success">{product.site}</div>
+                                    <div className="text-success">{product.source}</div>
                                   </Col>
                                 </Row>
                               </Col>
