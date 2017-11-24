@@ -14,15 +14,15 @@ app.prepare().then(() => {
     let query = req.params.query;
     let items = [];
 
-    let jumiaProducts = await scrapeJumia(query);
-    console.log('jumia fetched');
-    jumiaProducts.forEach((result)=>{
-      items.push(result);
-    })
-
     let kongaProducts = await scrapeKonga(query);
     console.log('konga fetched');
     kongaProducts.forEach((result)=>{
+      items.push(result);
+    })
+
+    let jumiaProducts = await scrapeJumia(query);
+    console.log('jumia fetched');
+    jumiaProducts.forEach((result)=>{
       items.push(result);
     })
 
