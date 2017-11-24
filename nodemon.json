@@ -1,0 +1,8 @@
+{
+  "ignore": [
+   ".git",
+   ".next",   
+   "pages",
+   "node_modules/**/node_modules"
+ ]
+}
